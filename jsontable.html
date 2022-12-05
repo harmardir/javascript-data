@@ -1,0 +1,58 @@
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+<table class="table table-striped">
+    <thead>
+      <tr class="bg-info">
+        <th>Name</th>
+        <th>Age</th>
+        <th>Birthday</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+   
+    </tbody>
+  </table>
+
+
+
+  <script>
+    var myArray = [
+        {'name':'Micheal', 'age':'30','birthday':'11/10/1992'},
+        {'name':'Mila', 'age':'31','birthday':'11/10/1991'},
+        {'name':'Paul', 'age':'29','birthday':'11/10/1991'},
+        {'name':'Dennis', 'age':'36','birthday':'11/10/1986'},
+        {'name':'Tim', 'age':'39','birthday':'11/10/1984'},
+        {'name':'Victoria', 'age':'29','birthday':'11/10/1998'},
+        {'name':'Frank', 'age':'25','birthday':'11/10/1997'},
+        {'name':'Aida', 'age':'27','birthday':'11/10/1996'},
+        {'name':'Linda', 'age':'21','birthday':'11/10/2001'},
+        {'name':'Tom', 'age':'19','birthday':'11/10/2003'},
+        {'name':'Arthur', 'age':'33','birthday':'11/10/1989'},
+    ]
+
+    buildTable(myArray)
+
+    function buildTable(data){
+        var table = document.getElementById('myTable')
+
+
+        for (var i = 0 ; i < data.length ; i++){
+            var row = `<tr>
+                        <td>${data[i].name}</td>
+                        <td>${data[i].age}</td>
+                        <td>${data[i].birthday}</td>
+                    </tr>`
+            table.innerHTML += row
+        }
+    }
+
+
+
+
+
+</script>
